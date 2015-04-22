@@ -2,10 +2,19 @@ class ProblemsController  < ApplicationController
   def num_1
     #=== Instructions ======================
     # Create a condition that sets @result equal to
-    # "true" if number is greater than 11 and false
+    # "true" if number is greater than 11 and "false"
     # otherwise
     #==================================
     number = 23
+    if number>11
+        @result = "tue"
+    else
+        @result = "false"
+    end
+
+    render 'problem'
+    end
+
 
     @result = "replace this string with your answer"
     render 'problem'
@@ -18,6 +27,11 @@ class ProblemsController  < ApplicationController
     # "not instructor" otherwise
     #==================================
     name = "Bob"
+        if name == "Arjun"
+        @result = "instructor"
+    else
+        @reslut = "not instructor"
+    end
 
     @result = "replace this string with your answer"
     render 'problem'
@@ -32,7 +46,12 @@ class ProblemsController  < ApplicationController
     #==================================
     money = 73000
 
-    @result = "replace this string with your answer"
+    if money > 75000
+        @results = "no further effect on happiness"
+    else
+        @results = "some effect on happiness"
+    end
+
     render 'problem'
   end
 
@@ -44,8 +63,15 @@ class ProblemsController  < ApplicationController
     # "meh" for all other cases
     #==================================
     activity = "cleaning"
+    if activity == "napping"
+        @result = "the best"
+    elseif activity =="cleaning"
+        @result = "the worst"
+    else
+        @result = "meh"
 
-    @result = "replace this string with your answer"
+    end
+
     render 'problem'
   end
 
@@ -56,6 +82,13 @@ class ProblemsController  < ApplicationController
     # 79 and "C" for all other cases
     #==================================
     score = 82
+    if score >89
+        @result="A"
+    elsif > 79
+        @result = "B"
+    else
+        @result = "C"
+    end
 
     @result = "replace this string with your answer"
     render 'problem'
@@ -92,6 +125,18 @@ class ProblemsController  < ApplicationController
     #
     # You'll need to create a new view
     #==================================
+    food = "cake shake"
+    if food == "fruit"
+        @results = "healthy"
+    elsif food == "vegetables"
+        @results = "healthy"
+    elsif food == "Lucky Charms"
+        @results = "unhealthy"
+    elsif food == "Cake Shake"
+        @results = "heart attack"
+
+    end
+
 
     render 'problem'
   end
